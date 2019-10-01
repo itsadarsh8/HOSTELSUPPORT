@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.moon.complaintsystem.MainActivity.electricity;
 import static com.example.moon.complaintsystem.MainActivity.sanitary;
 import static com.example.moon.complaintsystem.MainActivity.userNameDataBase;
 import static com.example.moon.complaintsystem.MainActivity.userRoomDataBase;
@@ -65,7 +64,7 @@ public class sanitaryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sanitary);
         userComplaint=(EditText)findViewById(R.id.userComplaint);
         userName=(EditText)findViewById(R.id.userName);
-        userRoom=(EditText)findViewById(R.id.roomNo);
+        userRoom=(EditText)findViewById(R.id.userPhone);
         displayText=(TextView)findViewById(R.id.displayText);
 
         prefs2 = getSharedPreferences("com.example.moon.complaintsystem", MODE_PRIVATE);

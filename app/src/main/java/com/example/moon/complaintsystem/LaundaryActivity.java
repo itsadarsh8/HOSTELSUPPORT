@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.example.moon.complaintsystem.MainActivity.laundry;
-import static com.example.moon.complaintsystem.MainActivity.mess;
 import static com.example.moon.complaintsystem.MainActivity.userNameDataBase;
 import static com.example.moon.complaintsystem.MainActivity.userRoomDataBase;
 
@@ -66,7 +65,7 @@ public class LaundaryActivity extends AppCompatActivity {
 
         userComplaint=(EditText)findViewById(R.id.userComplaint);
         userName=(EditText)findViewById(R.id.userName);
-        userRoom=(EditText)findViewById(R.id.roomNo);
+        userRoom=(EditText)findViewById(R.id.userPhone);
         displayText=(TextView)findViewById(R.id.displayText);
 
         prefs4 = getSharedPreferences("com.example.moon.complaintsystem", MODE_PRIVATE);

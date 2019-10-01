@@ -67,7 +67,7 @@ public class OtherActivity extends AppCompatActivity {
 
         userComplaint=(EditText)findViewById(R.id.userComplaint);
         userName=(EditText)findViewById(R.id.userName);
-        userRoom=(EditText)findViewById(R.id.roomNo);
+        userRoom=(EditText)findViewById(R.id.userPhone);
         displayText=(TextView)findViewById(R.id.displayText);
 
         prefs6 = getSharedPreferences("com.example.moon.complaintsystem", MODE_PRIVATE);

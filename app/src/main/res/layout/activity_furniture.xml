@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.168" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/pending_button"
         android:layout_width="138dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
@@ -116,7 +116,7 @@
         app:layout_constraintVertical_bias="0.912" />
 
     <EditText
-        android:id="@+id/roomNo"
+        android:id="@+id/userPhone"
         android:layout_width="150dp"
         android:layout_height="66dp"
         android:layout_marginStart="8dp"

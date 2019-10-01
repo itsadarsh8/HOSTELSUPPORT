@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.example.moon.complaintsystem.MainActivity.mess;
-import static com.example.moon.complaintsystem.MainActivity.sanitary;
 import static com.example.moon.complaintsystem.MainActivity.userNameDataBase;
 import static com.example.moon.complaintsystem.MainActivity.userRoomDataBase;
 
@@ -64,7 +63,7 @@ public class MessActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mess);
         userComplaint=(EditText)findViewById(R.id.userComplaint);
         userName=(EditText)findViewById(R.id.userName);
-        userRoom=(EditText)findViewById(R.id.roomNo);
+        userRoom=(EditText)findViewById(R.id.userPhone);
         displayText=(TextView)findViewById(R.id.displayText);
 
         prefs3 = getSharedPreferences("com.example.moon.complaintsystem", MODE_PRIVATE);

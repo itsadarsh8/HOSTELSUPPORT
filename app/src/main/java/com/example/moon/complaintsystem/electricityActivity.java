@@ -1,14 +1,15 @@
 package com.example.moon.complaintsystem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
 import static com.example.moon.complaintsystem.MainActivity.electricity;
 import static com.example.moon.complaintsystem.MainActivity.userNameDataBase;
 import static com.example.moon.complaintsystem.MainActivity.userRoomDataBase;
@@ -16,9 +17,17 @@ import static com.example.moon.complaintsystem.MainActivity.userRoomDataBase;
 
 public class electricityActivity extends AppCompatActivity {
     EditText userComplaint,userName,userRoom;
-    TextView displayText;
-    SharedPreferences prefs;
-    int flag;
+
+    static SharedPreferences prefs;
+
+    public void pendingStatus(View view){
+
+        Intent myIntent=new Intent(this,pending_request.class);
+        startActivity(myIntent);
+
+
+    }
+
 
     public void onClick(View view){
 
@@ -35,7 +44,7 @@ public class electricityActivity extends AppCompatActivity {
 
 
 
-        if(userComplaint.getText().toString().equals("")||userRoom.getText().toString().equals("")||userName.getText().toString().equals("")) {
+        if(userComplaint.getText().toString().equals("")||userRoom.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Please enter a valid complaint", Toast.LENGTH_SHORT).show();
 
 
@@ -50,10 +59,10 @@ public class electricityActivity extends AppCompatActivity {
             String enteredComplaint = userComplaint.getText().toString();
             Toast.makeText(getApplicationContext(), "Complaint Registered Successfully", Toast.LENGTH_SHORT).show();
             prefs.edit().putString("ElectricityComplaint", enteredComplaint).apply();
-            displayText.setText("Your Registered Complaint - " + enteredComplaint);
+            //displayText.setText("Your Registered Complaint - " + enteredComplaint);
             electricity.setValue(enteredComplaint);
-            userRoomDataBase.setValue(userRoom.getText().toString());
-            userNameDataBase.setValue(userName.getText().toString());
+          //  userRoomDataBase.setValue(userPhone.getText().toString());
+
         }
 
 
@@ -66,11 +75,11 @@ public class electricityActivity extends AppCompatActivity {
         setContentView(R.layout.activity_electricity);
         userComplaint=(EditText)findViewById(R.id.userComplaint);
         userName=(EditText)findViewById(R.id.userName);
-        userRoom=(EditText)findViewById(R.id.roomNo);
-        displayText=(TextView)findViewById(R.id.displayText);
+        userRoom=(EditText)findViewById(R.id.userPhone);
+
 
         prefs = getSharedPreferences("com.example.moon.complaintsystem", MODE_PRIVATE);
-        displayText.setText("Your Registered Complaint - "+prefs.getString("ElectricityComplaint","No Complaints registered"));
+      //  displayText.setText("Your Registered Complaint - "+prefs.getString("ElectricityComplaint","No Complaints registered"));
 
     }
 }
