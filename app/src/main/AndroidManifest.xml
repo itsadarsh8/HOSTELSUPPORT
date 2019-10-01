@@ -12,20 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginScreen"></activity>
+        <activity android:name=".welcome_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".electricityActivity" />
         <activity android:name=".sanitaryActivity" />
         <activity android:name=".MessActivity" />
         <activity android:name=".LaundaryActivity" />
         <activity android:name=".FurnitureActivity" />
         <activity android:name=".OtherActivity" />
-        <activity android:name=".notification"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

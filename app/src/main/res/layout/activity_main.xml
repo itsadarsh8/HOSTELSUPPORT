@@ -21,16 +21,17 @@
                 android:id="@+id/textGrid2"
                 android:layout_width="294dp"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/textGrid"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="46dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="-29dp"
+                android:layout_marginEnd="43dp"
                 android:text="COMPLAINTS"
                 android:textAlignment="center"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="36sp" />
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textGrid"
@@ -46,7 +47,8 @@
                 android:text="GU HOSTEL"
                 android:textAlignment="center"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
-                android:textSize="36sp" />
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
