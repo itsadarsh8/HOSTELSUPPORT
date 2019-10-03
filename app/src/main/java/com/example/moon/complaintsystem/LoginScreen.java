@@ -6,28 +6,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import static com.example.moon.complaintsystem.welcome_screen.userPanel;
+
 
 
 public class LoginScreen extends AppCompatActivity {
-
-    String default_username = "admin";
-    String default_password = "admin";
     EditText username,password;
+    String usernameTemp;
 
-    public void loginButton(View view){
+   public void loginButton(View view){
 
-        if (username.getText().toString().equals(default_username)) {
-            if (password.getText().toString().equals(default_password)) {
+       usernameTemp=username.getText().toString();
+
+
+        if (usernameTemp.equals(password.getText().toString())) {
+
                 Intent i = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(i);
-
-            } else {
-                Toast.makeText(getApplicationContext(), "Invalid Password", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(getApplicationContext(), "Invalid Username", Toast.LENGTH_SHORT).show();
+                String AdmissionNumber= username.getText().toString();
+                userPanel.child("Admission Number").setValue(AdmissionNumber);
         }
 
+        else {
+            Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
